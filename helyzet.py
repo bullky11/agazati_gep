@@ -33,17 +33,19 @@ def beolvas():
 
 
 def gepekszama():
-    print(len(gepek_lista))
+    print(f"A gépek száma: {len(gepek_lista)}")
 
 
 def atlag():
     i=0
     parostermek=0
+    db=0
     while i< len(gepek_lista):
         if int(gepek_lista[i].hely[1:])%2==0:
-            parostermek+=int(gepek_lista[i].hely[1:])
+            db += 1
+            parostermek+=gepek_lista[i].id
         i+=1
-    print(parostermek/len(gepek_lista))
+    print(f" A páros teremszámú termek azonosító átlaga: {int(parostermek/db)}")
 
 
 def legkisebb():
@@ -51,7 +53,8 @@ def legkisebb():
     idx=-1
     while i<len(gepek_lista):
         if (gepek_lista[i].tipus=="asztali" and idx==-1):
-            print(gepek_lista[i])
+            print(f"A legkisebb asztali gép azonosítója: {gepek_lista[i].id } helye: {gepek_lista[i].hely}")
             idx+=1
         i+=1
+
 
