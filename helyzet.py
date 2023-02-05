@@ -47,6 +47,11 @@ def atlag():
 
 
 def legkisebb():
-
-
+    i=0
+    idx=-1
+    while i<len(gepek_lista):
+        if (gepek_lista[i].tipus=="asztali" and idx==-1):
+            print(gepek_lista[i])
+            idx+=1
+        i+=1
 

@@ -9,3 +9,4 @@ import sorozat
 helyzet.beolvas()
 helyzet.gepekszama()
 helyzet.atlag()
+helyzet.legkisebb()
